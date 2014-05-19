@@ -1,0 +1,21 @@
+<table class="table">
+	<thead>
+		<tr>
+			<td>Id</td>
+			<td>Username</td>
+			<td>Password</td>
+			<td></td>
+		</tr>
+	</thead>
+	<tbody>
+		<% @users.each do |user| %>
+		<tr>
+			<td><%= user.id %></td>
+			<td><%= link_to user.username, user %></td>
+			<td><%= user.password %></td>
+			<td><%= link_to "Edit", edit_user_path(user.id) %></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+<%= link_to 'Create New User', new_user_path %>

@@ -1,0 +1,7 @@
+<h1>My Tweets</h1>
+<% @tweets.each do |tweet| %>
+	<div class="well">
+		<p><%= tweet.content %></p>	
+	</div>
+<% end %>
+<%= link_to 'Create New Tweet', new_tweet_path %>
